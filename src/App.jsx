@@ -42,15 +42,17 @@ export default function App() {
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         alignItems: "center",
+        height: "100vh",
       }}
     >
-      <p>count store</p>
-      <div>
-        <h1>Count: {count}</h1>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <h2>count store</h2>
+        <h3>Count: {count}</h3>
         <button onClick={increaseCount}>Increase</button>
         <button onClick={decreaseCount}>Decrease</button>
+        <button onClick={resetCount}>Reset</button>
 
         <label htmlFor="asyncInputTime">Time</label>
         <input
@@ -73,19 +75,18 @@ export default function App() {
         <button onClick={() => asyncIncrementCount(asyncTime, asyncAmount)}>
           Async Increment
         </button>
-        <button onClick={resetCount}>Reset</button>
       </div>
 
       <hr />
 
-      <p>items store</p>
-      <div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <h2>items store</h2>
         <div>
-          <p>items in store:</p>
+          <h3>items:</h3>
           {items.map((item, index) => {
             return (
               <div key={index}>
-                <p>{item}</p>
+                <p>item:{item} index:{index}</p>
                 <button onClick={() => removeItem(index)}>Remove</button>
               </div>
             );
