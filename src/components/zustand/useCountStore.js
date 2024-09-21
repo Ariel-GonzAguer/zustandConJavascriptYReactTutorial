@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useStore = create((set) => ({
+const useCountStore = create((set) => ({
   count: 0,
   increaseCount: () => set((state) => ({ count: state.count + 1 })),
   decreaseCount: () => set((state) => ({ count: state.count - 1 })),
@@ -11,4 +11,4 @@ const useStore = create((set) => ({
   resetCount: () => set({ count: 0 }),
 }));
  
-export default useStore;
+export default useCountStore;

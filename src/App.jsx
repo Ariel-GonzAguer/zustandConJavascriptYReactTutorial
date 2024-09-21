@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { shallow } from "zustand/shallow";
-import useStore from "../src/components/zustand/useCountStore";
+import useCountStore from "../src/components/zustand/useCountStore";
 import useItemsStore from "../src/components/zustand/useItemsStore";
 
 export default function App() {
   // count store
   const { increaseCount, resetCount, decreaseCount, asyncIncrementCount } =
-    useStore();
+    useCountStore();
 
-  const count = useStore((state) => state.count);
+  const count = useCountStore((state) => state.count, shallow);
 
   const [asyncTime, setAsyncTime] = useState(0);
   const [asyncAmount, setAsyncAmount] = useState(0);
