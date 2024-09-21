@@ -112,5 +112,6 @@ return (
 );
 ```
 En este ejemplo, increaseCountAsync espera 1 segundo antes de incrementar el contador.
+
 ---
 Zustand es muy flexible y eficiente, lo que lo convierte en una excelente opción para la gestión de estado en aplicaciones React. ¡Explora sus posibilidades y adapta el código a tus necesidades!
